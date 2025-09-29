@@ -9,7 +9,9 @@ export default defineConfig({
   plugins: [react(), cloudflare()],
   build: {
     minify: true,
+    chunkSizeWarningLimit: 8000,
     sourcemap: 'inline', // Use inline source maps for better error reporting
+    
     rollupOptions: {
       output: {
         sourcemapExcludeSources: false, // Include original source in source maps
